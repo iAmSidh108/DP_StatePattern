@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class AppleRottenState : AppleBaseState
 {
+    float rottenToChewedStateTImer = 3f;
     public override void EnterState(AppleStatesManager apple)
     {
-        stateTXT.text = "Hello from RottenState. I was not picked up. So, I got rotten";
+        apple.stateTXT.text = "Hello from RottenState. I was not picked up. So, I got rotten";
     }
 
     public override void OnCollisionEnter(AppleStatesManager apple, Collision collision)
@@ -15,12 +16,19 @@ public class AppleRottenState : AppleBaseState
             //Get reference of player and decrease health
             //other.GetComponent<PlayerController>().ReduceHealth();
 
-            apple.SwitchState(apple.chewedState);
+            
         }
     }
 
     public override void UpdateState(AppleStatesManager apple)
     {
-
+        if (rottenToChewedStateTImer > 0)
+        {
+            rottenToChewedStateTImer-=Time.deltaTime;
+        }
+        else
+        {
+            apple.SwitchState(apple.chewedState);
+        }
     }
 }

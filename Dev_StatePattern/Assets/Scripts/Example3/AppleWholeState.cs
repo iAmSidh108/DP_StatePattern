@@ -6,7 +6,7 @@ public class AppleWholeState : AppleBaseState
 
     public override void EnterState(AppleStatesManager apple)
     {
-        stateTXT.text = "Hello from whole state. I have fully grown up and will soon fall off the tree because i am heavy and gravity will pull me down ";
+        apple.stateTXT.text = "Hello from whole state. I have fully grown up and will soon fall off the tree because i am heavy and gravity will pull me down ";
         
         apple.GetComponent<Rigidbody>().useGravity = true;
     }

@@ -6,7 +6,7 @@ public class AppleChewedState : AppleBaseState
     float destroyCountdown = 5f;
     public override void EnterState(AppleStatesManager apple)
     {
-        stateTXT.text = "I have been eaten now. THanks!!";
+        apple.stateTXT.text = "I have been eaten now. THanks!!";
     }
 
     public override void OnCollisionEnter(AppleStatesManager apple, Collision collision)

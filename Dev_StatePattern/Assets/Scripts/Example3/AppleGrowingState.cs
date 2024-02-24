@@ -5,7 +5,7 @@ public class AppleGrowingState : AppleBaseState
     float growAppleScalar = 0.1f;
     public override void EnterState(AppleStatesManager apple)
     {
-        stateTXT.text = "Hello from growing State. I will keep growing until someone plucks me up or i get roten.";
+        apple.stateTXT.text = "Hello from growing State. I will keep growing until someone plucks me up or i get roten.";
         
     }
 

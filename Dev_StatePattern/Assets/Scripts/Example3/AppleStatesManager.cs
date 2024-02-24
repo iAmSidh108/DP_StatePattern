@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class AppleStatesManager : MonoBehaviour
 {
 
     AppleBaseState currentState;
+    public TextMeshProUGUI stateTXT;
 
     public AppleGrowingState growingState=new AppleGrowingState();
     public AppleWholeState wholeState=new AppleWholeState();
